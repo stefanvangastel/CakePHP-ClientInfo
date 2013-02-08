@@ -30,10 +30,12 @@ You must place the ClientInfo CakePHP plugin within your CakePHP 2.x app/Plugin 
 	public $components = array(
 		'Session',
 		'RequestHandler',
-		'ClientInfo.ClientInfo',
+		'ClientInfo.ClientInfo', // <- This is the line which will trigger the magic
 		'DebugKit.Toolbar'
 	);
 
+
+**NOTE:** The component contains a session check to prevent double setting of vars and unnecessary actions.
 
 # Usage
 
